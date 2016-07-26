@@ -94,8 +94,7 @@ sap.ui.jsview("osr.eWorkflow.LA.view.LeaveRequest", {
 			text : "Leave of Type(假别)"
 		});
 		var oLeaveType_v = new sap.m.Select("leavetype_v");
-		oLeaveType_v
-				.setModel(sap.ui.getCore().getModel("oTOL"));
+		oLeaveType_v.setModel(sap.ui.getCore().getModel("oTOL"));
 		oLeaveType_v.bindAggregation("items",
 		{
 			path : "oTOL>/TOLS",

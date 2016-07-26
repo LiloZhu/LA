@@ -67,8 +67,8 @@ sap.ui.controller("osr.eWorkflow.LA.view.LeaveRequest", {
 		
 		var oModel_TOL = new sap.ui.model.json.JSONModel();
 		oModel_TOL.setData(oData1);
-		sap.ui.getCore().setModel(oModel_TOL, "oTOL");
-		//this.getView().setModel(oModel_TOL, "TOL");		
+		//sap.ui.getCore().setModel(oModel_TOL, "oTOL");
+		this.getView().setModel(oModel_TOL, "oTOL");		
       
 	  //---Now Date/Time---
 	  var oData2 = {
