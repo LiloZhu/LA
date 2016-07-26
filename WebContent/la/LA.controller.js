@@ -1,4 +1,4 @@
-sap.ui.controller("la.LA",
+sap.ui.controller("osr.eWorkflow.LA。View.LA",
 {
 
 	/**

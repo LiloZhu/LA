@@ -1,6 +1,5 @@
-sap.ui
-		.jsview(
-				"la.LA",
+sap.ui.jsview(
+				"osr.eWorkflow.LA.View.LA",
 				{
 
 					/**
@@ -12,7 +11,7 @@ sap.ui
 					 */
 					getControllerName : function()
 					{
-						return "la.LA";
+						return "osr.eWorkflow.LA.View.LA";
 					},
 
 					/**
@@ -201,6 +200,9 @@ sap.ui
 						//oSForm.addContent(oLabel_1);
 
 						//<-
+						
+						
+						
 
 						//======Leave Application======
 
@@ -208,7 +210,9 @@ sap.ui
 						[
 							oSForm
 						];
-						return new sap.m.Page(
+						
+						
+						var oPage = new sap.m.Page(
 						{
 							title : sTitle_0,
 							content :
@@ -235,7 +239,12 @@ sap.ui
 
 						});
 
-						return ele;
+						
+						this.app = new sap.m.App();
+						this.app.addPage(oPage,true);
+						return this.app;
+						
+						//return ele;
 
 						//
 					}
