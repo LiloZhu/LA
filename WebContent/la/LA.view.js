@@ -98,8 +98,7 @@ sap.ui
 							key : "{oTOL>TOL_CODE}",
 							text : "{oTOL>TOL_TEXT}"
 						});
-						
-						
+
 						var oLeaveType_t = new sap.m.Label("leavetype_t",
 						{
 							text : "Leave of Type(假别)"
@@ -153,6 +152,7 @@ sap.ui
 						var oReason_t = new sap.m.Label("reason_t",{text: "Reason(理由)"});
 						var oReadon_v = new sap.m.Input("reason_v",{value: ""});
 																	
+						
 						
 
 						// ---<Group Screen Element>---
