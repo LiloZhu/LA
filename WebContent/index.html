@@ -3,50 +3,31 @@
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
-		
 		<script src="resources/sap-ui-core.js"
 				id="sap-ui-bootstrap"
 				data-sap-ui-libs="sap.m,sap.ui.commons,sap.ui.layout"
 				data-sap-ui-theme="sap_bluecrystal"
 				data-sap-ui-resourceroots='{
 				"osr.eWorkflow.LA": "./"
-				}' 				
-				>
-		</script>		
-<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
-
+				}' >				
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
   <style type="text/css">
     .fontclass{
       background-color : #FF8800;
       color: #FFFFFF;    
-      font-style: italic;
+      font-style: italic;   
     }
   </style>
   
 		<script>
-/*		
-				jQuery.sap.require("osr.eWorkflow.LA.Common");
-				new sap.m.Shell("shell", {
-					app: new sap.ui.conre.ComponentContainer({
-						name: 'osr.eWorkflow.LA'
-					})
-				}).placeat.at('content');
-				
-*/
-
-new sap.ui.core.ComponentContainer({
-	name : "osr.eWorkflow.LA"
-}).placeAt("content");
-				
-				
-/* 				sap.ui.localResources("la");
-				var app = new sap.m.App({initialPage:"idLA1"});
-				var page = sap.ui.view({id:"idLA1", viewName:"la.LA", type:sap.ui.core.mvc.ViewType.JS});
-				app.addPage(page);
-				app.placeAt("content"); */
+			new sap.ui.core.ComponentContainer({
+				name : "osr.eWorkflow.LA"
+			}).placeAt("content");
 		</script>
 
 	</head>
-	<body class="sapUiBody" id="content">
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
 	</body>
 </html>

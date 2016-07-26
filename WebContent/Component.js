@@ -1,58 +1,27 @@
 jQuery.sap.declare("osr.eWorkflow.LA.Component");
 
-sap.ui.core.UIComponent.extend("osr.eWorkflow.LA.Component",
-		{
-	
-/*		metdata:{
-			routing: {
-				config: {
-					viewType: "JS",
-					viewPath: "la",
-					targetControl: "splitApp",
-					clearTarget: false,
-					translition: "slide"
-				
-				},
+sap.ui.core.UIComponent.extend("osr.eWorkflow.LA.Component", {
 
-			rounts: [
-			         ]
+	createContent : function() {
 
-
-			}
-		},*/
-		
-/*		// ---Init Data---
-		init: function() {
-			jQuery.sap.require("sap.m.routing.RouteMatchHandler");
-			jQuery.sap.require("sap.ui.core.routing.HashChanger");
-			
-			//call createcontent
-			sap.ui.core.UIComponent.property.init.apply(this.arguments);
-			
-			this._router = this.getRouter();
-			
-			//init the router
-			this._routeHandler = new sap.m.routing.RouteMatchedHandler(this._router);
-			this._router.initialize();
-			
-		},
-		*/
-		
-		//---Create Content---
-		createContent : function() {
-			
-			// create root view
-			var oView = sap.ui.view({
-				id : "app",
-				viewName : "osr.eWorkflow.LA.View.LA",
-				type : "JS",
-				viewData : { component : this }
-			});
-			
-			//var oModel
-			return oView;
-			
-		}
-
-
+		// create root view
+		var oView = sap.ui.view({
+			id : "app",
+			viewName : "osr.eWorkflow.LA.view.App",
+			type : "JS",
+			viewData : { component : this }
 		});
+
+//		// Using OData model to connect against a real service
+//		var url = "/proxy/http/<server>:<port>/sap/opu/odata/sap/ZGWSAMPLE_SRV/";
+//		var oModel = new sap.ui.model.odata.ODataModel(url, true, "<user>", "<password>");
+//		oView.setModel(oModel);
+
+		// Using a local model for offline development
+		//var oModel = new sap.ui.model.json.JSONModel("model/mock.json");
+		//oView.setModel(oModel);
+
+		// done
+		return oView;
+	}
+});
